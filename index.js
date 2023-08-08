@@ -1,12 +1,12 @@
-const retrieveEntries = () => {
+const retrieverEntries = () => {
   let entries = localStorage.getItem("user-Entries");
   return entries ? JSON.parse(entries) : [];
 };
 
-let userEntries = retrieveEntries();
+let userEntries = retrieverEntries();
 
 const displayEntries = () => {
-  const entries = retrieveEntries();
+  const entries = retrieverEntries();
 
   const tableEntries = entries
     .map(
